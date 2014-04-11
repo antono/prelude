@@ -1,7 +1,3 @@
-;; Some custom
-(setq prelude-guru nil)
-
-(fringe-mode '(0 . 8)) ;; Right fringe only
 
 (when window-system
   (setq frame-title-format '(buffer-file-name "Emacs: %f" ("%b")))
@@ -32,11 +28,17 @@
 
 (linum-mode)
 
+;;
+;; Speedbar
+;;
+(setq speedbar-show-unknown-files t)
+(setq speedbar-use-images nil)
+(setq sr-speedbar-auto-refresh nil)
+
 (load-theme 'wombat)
 
 ;; Draw line feed ^L as line!
-(unless (package-installed-p 'pp-c-l)
-  (package-install 'pp-c-l))
+(prelude-require-package 'pp-c-l)
 (require 'pp-c-l)
 
 ;;

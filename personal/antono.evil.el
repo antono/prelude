@@ -4,8 +4,7 @@
 ;;;   My very own custom evil configurations...
 ;;;
 ;;; Code:
-(unless (package-installed-p 'evil)
-  (package-install 'evil))
+(prelude-require-package 'evil)
 
 (setq evil-mode-line-format 'before)
 (setq evil-want-C-u-scroll t)
@@ -22,19 +21,22 @@
 ;;
 ;; Evil Surround
 ;;
-(unless (package-installed-p 'surround)
-  (package-install 'surround))
-
+(prelude-require-package 'surround)
 (require 'surround)
 (global-surround-mode 1)
 
 ;;
+;; Evil search visual selection with *
+;;
+(prelude-require-package 'evil-visualstar)
+(require 'evil-visualstar)
+
+;;
 ;; Evil Numbers
 ;;
-(unless (package-installed-p 'evil-numbers)
-  (package-install 'evil-numbers))
-
+(prelude-require-package 'evil-numbers)
 (require 'evil-numbers)
+
 (define-key evil-normal-state-map (kbd "C-A")
   'evil-numbers/inc-at-pt)
 (define-key evil-normal-state-map (kbd "C-S-A")
