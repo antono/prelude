@@ -1,3 +1,6 @@
+(global-flycheck-mode -1)
+(global-hl-line-mode -1)
+(fringe-mode '(0 . 8)) ;; Right fringe only
 
 (when window-system
   (setq frame-title-format '(buffer-file-name "Emacs: %f" ("%b")))
@@ -26,7 +29,7 @@
          'face
          'linum)))
 
-(linum-mode)
+(global-linum-mode)
 
 ;;
 ;; Speedbar
