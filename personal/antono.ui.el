@@ -4,9 +4,7 @@
 
 (when window-system
   (setq frame-title-format '(buffer-file-name "Emacs: %f" ("%b")))
-  (tooltip-mode t)
-  (mouse-wheel-mode t)
-  (set-face-attribute 'default nil :font "Liberation Mono" :height 120))
+  (set-face-attribute 'default nil :font "Liberation Mono" :height 130))
 
 ;; (add-to-list 'safe-local-variable-values '(whitespace-line-column . 80))
 
@@ -46,8 +44,7 @@
 ;;
 ;; Powerline
 ;;
-(unless (package-installed-p 'powerline)
-  (package-install 'powerline))
+(prelude-require-package 'powerline)
 (require 'powerline)
 (powerline-vim-theme)
 
