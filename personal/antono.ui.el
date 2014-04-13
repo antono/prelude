@@ -6,7 +6,7 @@
   (setq frame-title-format '(buffer-file-name "Emacs: %f" ("%b")))
   (tooltip-mode t)
   (mouse-wheel-mode t)
-  (set-face-attribute 'default nil :font "Liberation Mono" :height 120))
+  (set-face-attribute 'default nil :font "Liberation Mono" :height 150))
 
 ;; (add-to-list 'safe-local-variable-values '(whitespace-line-column . 80))
 
