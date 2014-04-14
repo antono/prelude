@@ -1,4 +1,4 @@
-(prelude-require-packages '(mo-git-blame minimap))
+(prelude-require-packages '(mo-git-blame minimap persp-mode))
 
 (global-set-key (kbd "s-l")     'helm-mini)
 (global-set-key (kbd "C-S-s-l") 'helm-locate)
@@ -18,12 +18,8 @@
 (global-set-key (kbd "s-p") 'persp-next)
 (global-set-key (kbd "s-n") 'persp-prev)
 
-
 ;; Kinda Ctrl+^ in Vim
 (define-key global-map "\C-^"
   (lambda ()
     (interactive)
     (switch-to-buffer (other-buffer))))
-
-;; Start shell or switch to it if it's active.
-(global-set-key (kbd "C-x m") 'shell)
