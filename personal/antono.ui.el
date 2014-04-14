@@ -6,6 +6,8 @@
   (setq frame-title-format '(buffer-file-name "Emacs: %f" ("%b")))
   (set-face-attribute 'default nil :font "Liberation Mono" :height 130))
 
+(setq x-resource-class "emacs-snapshot") ;; => correct hi-res icon in gnome window switcher
+
 ;; (add-to-list 'safe-local-variable-values '(whitespace-line-column . 80))
 
 ;; Transparently open compressed files
