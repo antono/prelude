@@ -1,3 +1,1 @@
-(prelude-require-packages '(markdown-mode))
-
-
+(prelude-require-packages '(markdown-mode dart-mode))
