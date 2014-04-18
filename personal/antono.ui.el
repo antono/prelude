@@ -42,6 +42,7 @@
 ;; Draw line feed ^L as line!
 (prelude-require-package 'pp-c-l)
 (require 'pp-c-l)
+(pretty-control-l-mode 1)
 
 ;;
 ;; Powerline
@@ -49,6 +50,12 @@
 (prelude-require-package 'powerline)
 (require 'powerline)
 (powerline-vim-theme)
+
+;;
+;; Underscore "_" is not a word character
+;; https://bitbucket.org/lyro/evil/wiki/Home
+(modify-syntax-entry ?_ "w")
+(add-hook 'c-mode-common-hook #'(lambda () (modify-syntax-entry ?_ "w")))
 
 (provide 'antono.ui)
 ;;; antono.ui ends here
