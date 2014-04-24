@@ -1,5 +1,8 @@
-(prelude-require-package 'projectile-rails)
+(prelude-require-packages '(projectile-rails rbenv))
+
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
+
+(setq rbenv-installation-dir "/usr/bin/rbenv")
 
 (mapcar
  (lambda (pattern)
