@@ -1,0 +1,5 @@
+(prelude-require-package 'desktop)
+(require 'desktop)
+(setq desktop-path (list prelude-savefile-dir))
+(setq desktop-dirname prelude-savefile-dir)
+(desktop-save-mode +1)
