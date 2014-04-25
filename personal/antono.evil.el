@@ -65,3 +65,16 @@
 
 (define-key evil-normal-state-map
   (kbd "C-S-u") 'evil-scroll-up-other-window)
+
+;;
+;; Magit from avsej
+;;
+(evil-add-hjkl-bindings magit-log-mode-map 'emacs)
+(evil-add-hjkl-bindings magit-commit-mode-map 'emacs)
+(evil-add-hjkl-bindings magit-branch-manager-mode-map 'emacs
+  "K" 'magit-discard-item
+  "L" 'magit-key-mode-popup-logging)
+(evil-add-hjkl-bindings magit-status-mode-map 'emacs
+  "K" 'magit-discard-item
+  "l" 'magit-key-mode-popup-logging
+  "h" 'magit-toggle-diff-refine-hunk)
