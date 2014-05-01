@@ -57,5 +57,9 @@
 (modify-syntax-entry ?_ "w")
 (add-hook 'c-mode-common-hook #'(lambda () (modify-syntax-entry ?_ "w")))
 
+(custom-set-variables
+ '(projectile-tags-command "ripper-tags -R --format=emacs --force -f TAGS %s"))
+
+
 (provide 'antono.ui)
 ;;; antono.ui ends here
