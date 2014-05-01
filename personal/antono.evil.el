@@ -69,11 +69,9 @@
 ;;
 ;; Ace jump mode integration
 ;;
-(eval-after-load 'ace-jump-mode
-  '(progn
-     (define-key evil-motion-state-map "gl" 'evil-ace-jump-line-mode)
-     (define-key evil-motion-state-map "gc" 'evil-ace-jump-char-mode)
-     (define-key evil-motion-state-map "go" 'evil-ace-jump-word-mode)))
+(define-key evil-motion-state-map "gl" 'evil-ace-jump-line-mode)
+(define-key evil-motion-state-map "gc" 'evil-ace-jump-char-mode)
+(define-key evil-motion-state-map "go" 'evil-ace-jump-word-mode)
 
 ;;
 ;; Magit from avsej
