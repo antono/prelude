@@ -5,4 +5,4 @@
 (package-initialize)
 
 (prelude-require-packages
- '(markdown-mode dart-mode helm-package helm-make helm-rb ag))
+ '(markdown-mode dart-mode helm-package helm-make helm-rb ag etags-select))
