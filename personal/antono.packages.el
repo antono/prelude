@@ -1,7 +1,10 @@
 (require 'package)
 (add-to-list 'package-archives 
-    '("marmalade" .
-      "http://marmalade-repo.org/packages/"))
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+
+(add-to-list 'package-archives
+             '("SC" . "http://joseito.republika.pl/sunrise-commander/") t)
+
 (package-initialize)
 
 (prelude-require-packages
