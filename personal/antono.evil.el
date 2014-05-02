@@ -67,6 +67,13 @@
   (kbd "C-S-u") 'evil-scroll-up-other-window)
 
 ;;
+;; Ace jump mode integration
+;;
+(define-key evil-motion-state-map "gl" 'evil-ace-jump-line-mode)
+(define-key evil-motion-state-map "gc" 'evil-ace-jump-char-mode)
+(define-key evil-motion-state-map "go" 'evil-ace-jump-word-mode)
+
+;;
 ;; Magit from avsej
 ;;
 (evil-add-hjkl-bindings magit-log-mode-map 'emacs)
