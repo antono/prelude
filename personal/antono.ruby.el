@@ -2,7 +2,7 @@
 
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
 
-(setq rbenv-installation-dir "/usr/bin/rbenv")
+(setq rbenv-installation-dir "/usr")
 
 (mapcar
  (lambda (pattern)
