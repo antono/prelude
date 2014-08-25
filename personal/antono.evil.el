@@ -21,9 +21,9 @@
 ;;
 ;; Evil Surround
 ;;
-(prelude-require-package 'surround)
-(require 'surround)
-(global-surround-mode 1)
+(prelude-require-package 'evil-surround)
+(require 'evil-surround)
+(global-evil-surround-mode 1)
 
 ;;
 ;; Evil search visual selection with *
