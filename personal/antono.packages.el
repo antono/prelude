@@ -7,4 +7,7 @@
 (package-initialize)
 
 (prelude-require-packages
- '(markdown-mode dart-mode helm-package helm-make helm-rb ag etags-select))
+ '(markdown-mode dart-mode helm-package helm-make helm-rb ag etags-select editorconfig))
+
+;; http://editorconfig.org/
+(load "editorconfig")
