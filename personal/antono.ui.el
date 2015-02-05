@@ -1,12 +1,14 @@
+(getenv "XDG_CONFIG_HOME")
+(setenv "XDG_CONFIG_HOME" nil)
+
 (global-flycheck-mode -1)
 (global-hl-line-mode -1)
-;; (fringe-mode '(0 . 8)) ;; Right fringe only
 
 (when window-system
   (setq frame-title-format '(buffer-file-name "Emacs: %f" ("%b")))
   (set-face-attribute 'default nil :font "Liberation Mono" :height 135))
 
-(setq x-resource-class "emacs-snapshot") ;; => correct hi-res icon in gnome window switcher
+(setq x-resource-class "emacs-snapshot-gtk") ;; => correct hi-res icon in gnome window switcher
 
 ;; (add-to-list 'safe-local-variable-values '(whitespace-line-column . 80))
 

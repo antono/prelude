@@ -7,7 +7,7 @@
 (package-initialize)
 
 (prelude-require-packages
- '(markdown-mode dart-mode helm-package helm-make helm-rb ag etags-select editorconfig))
+ '(markdown-mode dart-mode helm-package helm-make helm-rb ag etags-select editorconfig rubocop))
 
 ;; http://editorconfig.org/
 (load "editorconfig")

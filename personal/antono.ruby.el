@@ -10,6 +10,10 @@
  '("Gemfile$" "Cheffile$" "Berksfile$" "config.ru$" "Rakefile$"
    "Guardfile$" "Capfile$" "*\.rb" "\\.rake$" "\\.gemspec$" "\\.rabl$"))
 
+(add-to-list 'hs-special-modes-alist
+	     '(ruby-mode
+	       "\\(def\\|do\\|{\\)" "\\(end\\|end\\|}\\)" "#"
+	       (lambda (arg) (ruby-end-of-block)) nil))
 
 (eval-after-load 'feature-mode
   '(progn
