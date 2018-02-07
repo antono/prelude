@@ -15,6 +15,7 @@
 	       "\\(def\\|do\\|{\\)" "\\(end\\|end\\|}\\)" "#"
 	       (lambda (arg) (ruby-end-of-block)) nil))
 
+
 (eval-after-load 'feature-mode
   '(progn
      (evil-define-key 'normal feature-mode-map
