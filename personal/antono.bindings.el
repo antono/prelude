@@ -1,8 +1,8 @@
 (prelude-require-packages '(mo-git-blame persp-mode))
 
-(global-set-key (kbd "s-l")     'helm-mini)
-(global-set-key (kbd "C-S-s-l") 'helm-locate)
-(global-set-key (kbd "s-i")     'helm-imenu)
+(global-set-key (kbd "C-S-p")     'helm-mini)
+(global-set-key (kbd "C-S-l")   'helm-locate)
+(global-set-key (kbd "C-S-i")     'helm-imenu)
 (global-set-key (kbd "s-B")     'helm-bookmarks)
 (global-set-key (kbd "s-e")     'speedbar-get-focus)
 (global-set-key (kbd "s-b")     'ibuffer)

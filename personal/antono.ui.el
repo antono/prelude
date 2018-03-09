@@ -1,5 +1,5 @@
-(getenv "XDG_CONFIG_HOME")
-(setenv "XDG_CONFIG_HOME" nil)
+;; (getenv "XDG_CONFIG_HOME")
+;; (setenv "XDG_CONFIG_HOME" nil)
 
 (global-flycheck-mode -1)
 (global-hl-line-mode -1)
@@ -18,19 +18,6 @@
 ;; Type less: y instead yes
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-;;
-;; Nice linum padding
-;;
-;; (setq linum-format
-;;       (lambda (line)
-;;         (propertize
-;;          (format
-;;           (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
-;;             (concat " %" (number-to-string w) "d "))
-;;           line)
-;;          'face
-;;          'linum)))
-;; (global-linum-mode)
 
 ;;
 ;; Speedbar
@@ -42,9 +29,9 @@
 (load-theme 'wombat)
 
 ;; Draw line feed ^L as line!
-(prelude-require-package 'pp-c-l)
-(require 'pp-c-l)
-(pretty-control-l-mode 1)
+;; (prelude-require-package 'pp-c-l)
+;; (require 'pp-c-l)
+;; (pretty-control-l-mode 1)
 
 ;;
 ;; Powerline
@@ -61,6 +48,18 @@
 
 (custom-set-variables
  '(projectile-tags-command "ripper-tags -R --format=emacs --force -f TAGS %s"))
+
+
+;; Dark theme in gnome 3
+;; (defun set-selected-frame-dark ()
+;;   (interactive)
+;;   (let ((frame-name
+;;          (get-frame-name (selected-frame))))
+;;     (call-process-shell-command (concat "xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT \"dark\" -name \""
+;;                                         frame-name
+;;                                         "\""))))
+;; (if (window-system)
+;;     (set-selected-frame-dark))
 
 
 (provide 'antono.ui)
