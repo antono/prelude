@@ -2,8 +2,6 @@
 
 (add-to-list 'package-archives 
              '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives 
-             '("SC" . "http://joseito.republika.pl/sunrise-commander/") t)
 
 (package-initialize)
 
@@ -11,11 +9,10 @@
  '(
    markdown-mode
    dart-mode
-   helm-package
+   ;; helm-package
    helm-make
    helm-rb
-   ag
-   etags-select
+   ;; etags-select
    rubocop
    editorconfig
    ;; Rust related packages
@@ -25,7 +22,7 @@
    flycheck-rust
    flymake-rust
    racer
-   )) 
+)) 
 
 ;; http://editorconfig.org/
 (require 'editorconfig)
